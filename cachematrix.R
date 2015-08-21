@@ -1,23 +1,31 @@
+################################################################################################################################################################################################################
+##
+## Description:
+## 
 ## Matrix inversion is usually a costly computation and there may be some 
 ## benefit to caching the inverse of a matrix rather than compute it repeatedly.
 ## The functions makeCacheMatrix() and cacheSolve() below implements this caching.
 ## 
 ## Sample Run:
-## 
-## source('~/rprog/ProgrammingAssignment2/cachematrix.R')    # source th R file
-## m <- matrix( c(2,3,4,5), nrow=2,ncol=2)                   # create a square matrix
-## cm <- makeCacheMatrix(m)                                  # pass the matrix to the makeCacheMatrix() and assign output to a variable e.g. cm
-## cacheSolve(cm)                                            # pass list cm to cacheSolve()
+##
+## rsrcloc <- '~/rprog/ProgrammingAssignment2/cachematrix.R'     # location of the cachematrix.R file. This is just a sample.
+## source(rsrcloc)                                               # source the R file
+## m <- matrix( c(2,3,4,5), nrow=2,ncol=2)                       # create a square matrix
+## cm <- makeCacheMatrix(m)                                      # pass the matrix to the makeCacheMatrix() and assign output to a variable e.g. cm
+## cacheSolve(cm)                                                # pass list cm to cacheSolve(). Since cache is still empty at this point the matrix inverse will be computed using solve() and store to cache.
 ##      [,1] [,2]
 ## [1,] -2.5    2
 ## [2,]  1.5   -1
-## cacheSolve(cm)                                            # calling it again should retrieve the value from cache.
+## cacheSolve(cm)                                               # calling it again will retrieve the value from cache.
 ## returning cached matrix inverse
 ## [,1] [,2]
 ## [1,] -2.5    2
 ## [2,]  1.5   -1
 ##
-## Note: It is assumed that the matrix supplied is always invertible
+################################################################################################################################################################################################################
+
+
+
 
 
 
